@@ -1,10 +1,10 @@
 {
   "development": {
-    "apiUrl": "https://gatsby.ghost.io",
-    "contentApiKey": "9cc5c67c358edfdd81455149d0"
+    "apiUrl": "https://blog.bychkow.ski",
+    "contentApiKey": "b264b5819a86d20715ccccaf64"
   },
   "production": {
-    "apiUrl": "https://gatsby.ghost.io",
-    "contentApiKey": "9cc5c67c358edfdd81455149d0"
+    "apiUrl": "https://blog.bychkow.ski",
+    "contentApiKey": "b264b5819a86d20715ccccaf64"
   }
 }
