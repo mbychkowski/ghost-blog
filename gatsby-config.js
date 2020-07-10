@@ -2,6 +2,9 @@ const path = require(`path`)
 
 const config = require(`./src/utils/siteConfig`)
 const generateRSSFeed = require(`./src/utils/rss/generate-feed`)
+const targetAddress = new URL(
+    process.env.TARGET_ADDRESS || `https://blog-dev.bychkow.ski`
+)
 
 let ghostConfig
 
@@ -34,6 +37,28 @@ module.exports = {
         siteUrl: config.siteUrl,
     },
     plugins: [
+        /**
+         *  Deployment Plugins
+         */
+        {
+            resolve: `gatsby-plugin-s3`,
+            options: {
+                bucketName: process.env.TARGET_BUCKET_NAME || 'fake-bucket',
+                region: process.env.AWS_REGION || 'us-east-1',
+                protocol: targetAddress.protocol.slice(0, -1),
+                hostname: targetAddress.hostname,
+                acl: null,
+                params: {
+                    // In case you want to add any custom content types: https://github.com/jariz/gatsby-plugin-s3/blob/master/recipes/custom-content-type.md
+                },
+            },
+        },
+        {
+            resolve: `gatsby-plugin-canonical-urls`,
+            options: {
+                siteUrl: targetAddress.href.slice(0, -1),
+            },
+        },
         /**
          *  Content Plugins
          */
