@@ -1,10 +1,10 @@
 {
   "development": {
     "apiUrl": "https://admin.bychkow.ski",
-    "contentApiKey": "60533c51b76f1cb6a5ffa40361"
+    "contentApiKey": "df72b6974cd809086ae0c77882"
   },
   "production": {
     "apiUrl": "https://admin.bychkow.ski",
-    "contentApiKey": "60533c51b76f1cb6a5ffa40361"
+    "contentApiKey": "df72b6974cd809086ae0c77882"
   }
 }
