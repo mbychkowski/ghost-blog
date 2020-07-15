@@ -1,7 +1,7 @@
 const path = require(`path`)
 
 const config = require(`./src/utils/siteConfig`)
-const generateRSSFeed = require(`./src/utils/rss/generate-feed`)
+// const generateRSSFeed = require(`./src/utils/rss/generate-feed`)
 const targetAddress = new URL(
     process.env.TARGET_ADDRESS || `https://blog-dev.bychkow.ski`
 )
@@ -114,26 +114,26 @@ module.exports = {
               `,
             },
         },
-        {
-            resolve: `gatsby-plugin-feed`,
-            options: {
-                query: `
-                {
-                    allGhostSettings {
-                        edges {
-                            node {
-                                title
-                                description
-                            }
-                        }
-                    }
-                }
-              `,
-                feeds: [
-                    generateRSSFeed(config),
-                ],
-            },
-        },
+        // {
+        //     resolve: `gatsby-plugin-feed`,
+        //     options: {
+        //         query: `
+        //         {
+        //             allGhostSettings {
+        //                 edges {
+        //                     node {
+        //                         title
+        //                         description
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //       `,
+        //         feeds: [
+        //             generateRSSFeed(config),
+        //         ],
+        //     },
+        // },
         {
             resolve: `gatsby-plugin-advanced-sitemap`,
             options: {
