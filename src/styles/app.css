@@ -26,6 +26,8 @@ what's here to work the way you'd like it to.
     --color-base: #15171A;
     --color-secondary: #5B7A81;
     --color-border: #c7d5d8;
+    --color-text-primary: #15171A;
+    --color-test-secondary: #3c484e;
     --color-bg: #f5f5f5;
 
     /* Fonts */
@@ -522,6 +524,7 @@ h6 {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    background: var(--color-bg);
 }
 
 .container {
@@ -664,8 +667,7 @@ h6 {
 .site-head {
     padding-top: 20px;
     padding-bottom: 20px;
-    color: #fff;
-    background: var(--color-base);
+    color: var(--color-text-primary);
     background-position: center;
     background-size: cover;
 }
@@ -673,7 +675,7 @@ h6 {
 .site-nav-item {
     display: inline-block;
     padding: 5px 10px;
-    color: #fff;
+    color: var(--color-text-primary);
     opacity: 0.7;
 }
 
@@ -694,9 +696,13 @@ h6 {
 .site-logo-title {
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: var(--color-text-primary);
     font-size: 2rem;
+    font-weight: 900;
     line-height: 1.3em;
+    background: -webkit-linear-gradient(45deg, #ffa8b6, #51e2f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .site-mast {
@@ -724,7 +730,7 @@ h6 {
 .site-banner-title {
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: var(--color-text-primary);
     font-size: 4rem;
     line-height: 1.3em;
 }
@@ -767,7 +773,7 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .site-main {
-    padding: 4vw 0;
+    padding: 0 0 4vw 0;
 }
 
 /* Index
